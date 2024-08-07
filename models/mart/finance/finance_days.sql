@@ -1,3 +1,4 @@
+
 select
     op.date_date,
     count(op.orders_id) as nb_transactions,
@@ -7,3 +8,5 @@ select
     sum(op.operational_margin) as operational_margin
 from {{ ref("int_orders_operational") }} as op
 group by op.date_date
+
+
